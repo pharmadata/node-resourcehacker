@@ -8,7 +8,8 @@ Just another Resource Hacker wrapper for node.js.
 $ npm install node-resourcehacker --save
 ```
 
-During installation, the Resource Hacker binary will be automatically downloaded. I can't include a copy of Resource Hacker because it's illegal. Try setting `HTTP_PROXY` if you experience a slow download speed.
+During installation, the Resource Hacker binary will be automatically downloaded. I can't include a copy of Resource Hacker because it's illegal. Try setting `HTTP_PROXY` if you experience a slow download speed. 
+A custom url can be used to download a specific version of Resource Hacker if required, otherwise the default will be used which will always get the latest stable release.
 
 ## Usage
 
@@ -22,7 +23,8 @@ resourceHacker({
     output: 'nw.exe',
     resource: 'nw.ico',
     resourceType: 'ICONGROUP',
-    resourceName: 'IDR_MAINFRAME'
+    resourceName: 'IDR_MAINFRAME',
+    customUrl: 'http://foo.bar>'
 }, (err) => {
 
     if(err) {
